@@ -16,6 +16,10 @@ circle2 = Circle((5, 0), 2.0, edgecolor='red', facecolor='pink', fill=True)  # F
 ax.add_patch(circle1)
 ax.add_patch(circle2)
 
+# Create a third circle for the intersection with purple fill (blend of red and blue)
+intersection_circle = Circle((0, 0), 0, edgecolor='purple', facecolor='purple', fill=True)
+ax.add_patch(intersection_circle)
+
 # Animation function
 def animate(i):
     # Faster radius growth
@@ -27,8 +31,17 @@ def animate(i):
     max_overlap_distance = 2  # Maximum overlap at half distance
     circle1.set_center((-5 + (i / 50.0) * max_overlap_distance, 0))  # Faster movement
     circle2.set_center((5 - (i / 50.0) * max_overlap_distance, 0))   # Faster movement
-    
-    return circle1, circle2
+
+    # Calculate and set the intersection area properties
+    if i > 50:  # Only start showing intersection when the circles overlap
+        overlap_center_x = (circle1.center[0] + circle2.center[0]) / 2
+        overlap_radius = min(circle1.radius, circle2.radius) / 2  # Approximate intersection size
+        intersection_circle.set_center((overlap_center_x, 0))
+        intersection_circle.set_radius(overlap_radius)
+    else:
+        intersection_circle.set_radius(0)  # No intersection before overlap
+
+    return circle1, circle2, intersection_circle
 
 # Create animation with repeat=True to loop
 anim = FuncAnimation(fig, animate, frames=100, interval=50, repeat=True)  # Increased speed
