@@ -36,3 +36,16 @@ p {
     margin: 0 auto;
     display: block;
 }
+
+#animation1, #animation2, #animation3, #animation4 {
+    margin: 20px auto;
+    max-width: 640px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#sketch1, #sketch2, #sketch3, #sketch4 {
+    margin: 0 auto;
+    display: block;
+}
