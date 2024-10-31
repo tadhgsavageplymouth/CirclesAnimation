@@ -13,7 +13,7 @@ h1 {
     margin: 0;
 }
 
-#animation1, #animation2, #animation3 {
+#animation1, #animation2, #animation3, #animation4, #animation5 {
     margin: 20px auto;
     max-width: 640px;
     background-color: #ffffff;
@@ -32,20 +32,18 @@ p {
     color: #555;
 }
 
-#sketch1, #sketch2, #sketch3 {
+#sketch1, #sketch2, #sketch3, #sketch4, #sketchHashtags {
     margin: 0 auto;
     display: block;
 }
 
-#animation1, #animation2, #animation3, #animation4 {
-    margin: 20px auto;
-    max-width: 640px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
+/* Specific styling for the hashtag animation to stand out */
+#animation5 {
+    background-color: #e6f7ff; /* Light cyan background */
+    border: 2px solid #20b2aa; /* Slightly darker border */
 }
 
-#sketch1, #sketch2, #sketch3, #sketch4 {
-    margin: 0 auto;
-    display: block;
+#sketchHashtags {
+    width: 100%;
+    height: 400px; /* Fixed height for hashtag sketch */
 }
