@@ -1,40 +1,41 @@
-# Floating Circles Animation
+# The Social Bubble
 
-This Python project creates an animation of two circles growing at different rates, moving toward each other until they overlap. Upon overlap, a small circle "pops" out in a random direction and floats around the screen, bouncing off the edges. The animation repeats in a loop.
+The Social Bubble is an interactive web visualization that showcases YouTube video data, hashtag relationships, and more, using dynamically animated bubbles. Each "bubble" represents various metrics such as view counts and growth rates over time. The project is created using **p5.js** to render animations and visualize data on a responsive HTML page.
 
-## Features
-- Two circles that grow at different rates.
-- Circles move toward each other and overlap.
-- When the circles intersect, a small green circle pops out in a random direction.
-- The popped circle floats around, bouncing off the edges of the screen.
-  
-## Requirements
-To run this project, you need to have the following Python packages installed:
-- `matplotlib`
-- `numpy`
+## Table of Contents
 
-You can install these dependencies using `pip`:
-```bash
-pip install matplotlib numpy
-```
-## Running the Script
-To run the animation, simply execute the Python script in your terminal:
-```
-python your_script_name.py
-```
-The animation will open in a new window, where you can observe the behaviour of the circles.
-## How it Works
-- Growing Circles: The two main circles are created with different initial sizes. They grow at different rates as they move towards each other.
+- [Project Overview](#project-overview)
+- [Technologies](#technologies)
+- [Setup Instructions](#setup-instructions)
+- [Directory Structure](#directory-structure)
+- [Description of Scripts](#description-of-scripts)
+- [Usage](#usage)
+- [Customization](#customization)
 
-- Circle Overlap: Once the two circles overlap, the script calculates the point of interception and spawns a new small circle.
+## Project Overview
 
-- Floating Circle: The small circle "pops" out in a random direction and begins to move around the screen with a constant velocity. If it hits the boundaries of the plot, it will bounce off the walls and continue floating.
+The Social Bubble is designed to make data exploration engaging by using animations. Four visualizations (animations) are available:
 
-## Customisation
-- Circle Sizes and Growth Rates: You can adjust the initial sizes and growth rates of the circles by changing the radius1 and radius2 variables in the animate function.
+1. **Animation 1**: Bubbles that grow based on YouTube view counts and video length.
+2. **Animation 2**: Growth rate of bubbles based on view count and recency.
+3. **Animation 3**: Interacting circles representing different metrics that grow and collide to create new bubbles.
+4. **Animation 4**: View growth over time represented by growing and moving bubbles, showing view count changes dynamically.
 
-- Popped Circle Behaviour: The movement speed and behaviour of the popped circle can be adjusted by modifying the velocity array in the create_popped_circle() function.
+## Technologies
 
+- **HTML**: Structure of the webpage.
+- **CSS**: Styling for a cohesive and engaging design.
+- **JavaScript (p5.js)**: Used for animations and dynamic data visualization.
 
+## Setup Instructions
 
+### Prerequisites
 
+Ensure you have a web browser (Chrome, Firefox, etc.) and a text editor like **Visual Studio Code**. No additional server setup is required.
+
+### Getting Started
+
+1. **Download or Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/username/TheSocialBubble.git
