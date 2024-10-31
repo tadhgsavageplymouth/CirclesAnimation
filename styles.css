@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* AliceBlue */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #20b2aa; /* LightSeaGreen */
+    color: white;
+    margin: 0;
+}
+
+#animation1, #animation2, #animation3 {
+    margin: 20px auto;
+    max-width: 640px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #20b2aa;
+    text-align: center;
+    margin-top: 0;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+#sketch1, #sketch2, #sketch3 {
+    margin: 0 auto;
+    display: block;
+}
