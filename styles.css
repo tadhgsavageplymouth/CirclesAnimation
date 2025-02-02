@@ -3,6 +3,11 @@ body {
     background-color: #f0f8ff; /* AliceBlue */
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -10,15 +15,27 @@ h1 {
     padding: 20px;
     background-color: #20b2aa; /* LightSeaGreen */
     color: white;
+    width: 100%;
+    box-sizing: border-box;
     margin: 0;
 }
 
-#animation1, #animation2, #animation3, #animation4, #animation5 {
+.content-wrapper {
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allow vertical scrolling for better fit */
+    max-height: 90vh; /* Prevent overflowing off screen */
+}
+
+.animation-container {
     margin: 20px auto;
-    max-width: 640px;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures content stays within the box */
 }
 
 h2 {
@@ -30,20 +47,27 @@ h2 {
 p {
     text-align: center;
     color: #555;
+    margin: 10px 0;
 }
 
-#sketch1, #sketch2, #sketch3, #sketch4, #sketchHashtags {
-    margin: 0 auto;
-    display: block;
-}
-
-/* Specific styling for the hashtag animation to stand out */
-#animation5 {
-    background-color: #e6f7ff; /* Light cyan background */
-    border: 2px solid #20b2aa; /* Slightly darker border */
-}
-
-#sketchHashtags {
+.sketch {
     width: 100%;
-    height: 400px; /* Fixed height for hashtag sketch */
+    height: 500px; /* Increased height for better fitting animations */
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.hashtag {
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+/* Ensure special animations have ample space */
+.animation-container.special {
+    background-color: #e6f7ff; /* Light cyan background */
+    border: 2px solid #20b2aa;
+    padding: 30px; /* Extra padding for large animations */
 }
