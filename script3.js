@@ -1,3 +1,5 @@
+// script3.js
+
 function sketch3(p) {
     let circle1 = {
         x: -5,

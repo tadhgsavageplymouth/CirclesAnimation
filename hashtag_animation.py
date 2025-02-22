@@ -1,3 +1,5 @@
+# hashtag_animation.py
+
 import pygame
 import math
 
