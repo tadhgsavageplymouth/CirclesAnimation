@@ -1,0 +1,40 @@
+Python Preprocessing Script (minors.py upgrade)
+Goal: Dynamically extract and analyze hashtags from real video data.
+
+✅ Reads a CSV with video details (title, description, views).
+
+✅ Extracts hashtags from title + description.
+
+✅ Calculates:
+
+Total views per hashtag (viewCountSum)
+
+Number of videos using each hashtag (videoCount)
+
+Hashtag co-occurrence links (when hashtags appear together)
+
+✅ Outputs JSON with this structure for each hashtag:
+
+json
+Copy
+Edit
+{
+  "hashtag": "#example",
+  "viewCountSum": 150000,
+  "videoCount": 3,
+  "links": ["#another"]
+}
+🎨 2. JavaScript Visualisation (script5.js refactor)
+Goal: Visualize hashtags and their relationships more meaningfully.
+
+✅ Loads the generated JSON of hashtags.
+
+✅ Each hashtag becomes a node, sized by average views and colored randomly.
+
+✅ Links (edges) are drawn between hashtags that co-occurred in videos.
+
+✅ Hover tooltips show detailed data (views, count).
+
+✅ More dynamic, data-driven, and interactive network.
+
+This upgrade makes your visualization automatically reflect real trends in your dataset, with richer interconnections between hashtags based on how they’re actually used.
